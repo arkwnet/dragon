@@ -7,6 +7,9 @@
     </div>
     <div class="main">
       <div class="wrapper">
+        <div class="message" v-if="isMessage">
+          {{ message }}
+        </div>
         <div class="photo"><img :src="imageUrl" /></div>
         <canvas class="canvas" ref="canvas" width="1600" height="900"></canvas>
         <div class="control">
@@ -72,11 +75,17 @@ export default {
       adSlot: import.meta.env.VITE_AD_SLOT,
       version: import.meta.env.PACKAGE_VERSION,
       script: 'ﾎﾞﾀﾝ一発で\n作れるやつ',
-      subtitle: '好きなジェネレータ発表ドラゴン'
+      subtitle: '好きなジェネレータ発表ドラゴン',
+      isMessage: false,
+      message: ''
     }
   },
   mounted() {
     this.$gtag.pageview('/')
+    this.message = import.meta.env.VITE_MESSAGE
+    if (this.message != '' && this.message != undefined) {
+      this.isMessage = true
+    }
     this.imageUrl = import.meta.env.BASE_URL + 'img/loading.png'
     this.canvas = this.$refs.canvas
     this.context = this.canvas.getContext('2d')

@@ -49,6 +49,13 @@ p {
   margin: 20px 0;
 }
 
+.main .message {
+  padding: 20px;
+  background-color: #ffebee;
+  border: solid 1px #d32f2f;
+  border-radius: 5px;
+}
+
 .main .control,
 .main .photo {
   margin: 20px 0;

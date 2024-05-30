@@ -38,6 +38,7 @@ npm run lint
 VITE_GTAG_ID="Google Tag ID, Connection to GA4 required"
 VITE_AD_CLIENT="Google AdSense Publisher ID (ex: ca-pub-XXXXXXXXXXXXXXXX)"
 VITE_AD_SLOT="Google AdSense Unit ID (ex: XXXXXXXXXX)"
+VITE_MESSAGE="Notice Text (Not display if blank)"
 ```
 
 ## License
